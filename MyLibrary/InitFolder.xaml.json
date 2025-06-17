@@ -1,0 +1,21 @@
+{
+  "DisplayName": "InitFolder",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": "#00D8FF",
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "FolderName",
+      "DisplayName": "FolderName",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": "TextComposer",
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}
