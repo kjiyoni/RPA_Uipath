@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="k5tBKVYU406m3UM1I_yQ7g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEASURBVDhPtZAxSoNBFIQXBfUuW9t4AJtgcgNlMHgBDzGFXWALsVObgK21BkZMkU7sgo24YhE1HsBfXtCwefxBIzrwFbv75oN9IfxHcoprOcVWTvGozctDUA1QK35uJkXpNKc4zilWRpu9CpTxAuoY1Bao1bK44UslhaDkFdQJqHUTvPnS5103p7i9y94OqC6ocY3o0QRl8Syn2LDvzPwvhGA7ALUJynby/iUpBc85xSVfrAuowVRw3WlWRr/TfPKD8wJqH1Qy7DAx7fFi5Ad/lGIhD/5tXkAdgDo3fiu4mu7gLwUjUMt+2AeUcVMnMO5B3X7DXdnxgoUxwdBfLsDwA/R2eys5wa44AAAAAElFTkSuQmCC" Selector="&lt;html app='chrome.exe' title='주소정보누리집(도로명주소 안내시스템)' /&gt;" Title="주소정보누리집(도로명주소 안내시스템)" Url="https://www.juso.go.kr/openIndexPage.do" Version="V1">
+      <imageRef attrName="InformativeScreenshot" originalValue="7a8323db07204b85a7941f5ad8040ac9.jpg" xmlns="">0CE3edv128Em8ub3lM_addw</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="94xqs8pGO0CNGWJpB8UgRg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="juso.go.kr/openIndexPage.do" CVScreenId="d348d853-6834-4146-8c9d-64ed5ea91f87" CvElementArea="195, 387, 1325, 109" CvType="InputBox" DesignTimeRectangle="202, 392, 1179, 101" DesignTimeScaleFactor="1.25" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='mainHeaderSearch' tag='INPUT' type='' class='mainSearchBoxBasic__searchAdressTyping ui-autocomplete-input' placeholder='예) 도움6로 42, 국립중앙박물관, 상암동 1595, 초성검색' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;                검색어 입력 &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;            ' /&gt;" Guid="5694e7b2-4253-4f2b-8062-bd636075ecfd" ScopeSelectorArgument="&lt;html app='chrome.exe' title='주소정보누리집(도로명주소 안내시스템)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="32b4a264d823f37daa56687577c2e503.png" xmlns="">0r0FSmJyIWUmEEjmbd50LvQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

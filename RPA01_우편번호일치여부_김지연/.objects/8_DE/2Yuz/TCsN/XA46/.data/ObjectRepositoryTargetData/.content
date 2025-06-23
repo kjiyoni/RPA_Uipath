@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="iOm4wJELoUiQkCFulvUpgQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="juso.go.kr/openIndexPage.do" CVScreenId="9dc93968-7a82-4718-8b97-5dc1caea31cd" CvTextArea="1352, 821, 77, 25" CvType="AnyWordGroup" DesignTimeRectangle="1354, 816, 75, 35" DesignTimeScaleFactor="1.25" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='resultLayerPopup__functionPostalCodeNumber' parentid='list1' tag='STRONG' type='' /&gt;" Guid="43049bc2-409d-48c8-aaca-ecca8a55188e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='주소정보누리집(도로명주소 안내시스템)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="9dc93968-7a82-4718-8b97-5dc1caea31cd" CvTextArea="1362, 791, 57, 17" CvTextArgument="PHes" CvType="Text" DesignTimeRectangle="1365, 790, 54, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='resultLayerPopup__functionPostalCodeText' parentid='list1' tag='STRONG' type='' aaname=' &amp;#x9;                                      &amp;#x9;  우편번호 &amp;#x9;                                    ' check:innerText='우편번호' /&gt;" Guid="61e6d3ef-7506-47a8-82c0-be26489e25b6" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="291e65f30455ee12791cab7b1908cfdf.png" xmlns="">0a7CORKfx6k-6l6D29TX5lA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

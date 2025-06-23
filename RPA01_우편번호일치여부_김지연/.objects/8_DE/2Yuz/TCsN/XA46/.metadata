@@ -1,0 +1,14 @@
+﻿{
+  "Name": "우편번호",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "XA465gIxikO3UfEPTHJLCg",
+  "Reference": "n_gSBDNXoEG-rVJEPnrrWw/XA465gIxikO3UfEPTHJLCg",
+  "ParentRef": "n_gSBDNXoEG-rVJEPnrrWw/TCsNOtlEWk2TVT-D_uwaBg",
+  "Created": "2025-04-17T12:59:19.6643389Z",
+  "Updated": "2025-04-17T12:59:19.6643389Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.12.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

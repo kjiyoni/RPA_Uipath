@@ -1,0 +1,74 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/00_전체.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strGetPost&Sequence_1",
+        "intIndex&Sequence_1",
+        "strAddress&Sequence_1",
+        "arrdtFiltered&Sequence_1",
+        "dtFiltered&Sequence_1",
+        "dtPost&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtFiltered&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/01_우편번호_DT추출.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtPost&Sequence_1",
+        "arrdtFiltered&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_dtFiltered"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/02_우편번호_DT가공.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strGetPost&Sequence_1",
+        "strAddress&Sequence_1",
+        "intIndex&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dtFiltered"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/03_우편번호_DT저장.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_dtFiltered"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
