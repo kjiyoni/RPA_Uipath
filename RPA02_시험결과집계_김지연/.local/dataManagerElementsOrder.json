@@ -1,0 +1,169 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../../../AppData/Local/Programs/UiPath/Studio/Snippets/Windows/SnippetsVBasic/Snippets/Mail/02_IMAP_이메일수신.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strID&Sequence_1",
+        "sstrPassword&Sequence_1",
+        "lstMailMessages&Sequence_1",
+        "intIndex&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/01_이메일수신.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "mailMessages&Sequence_1",
+        "strID&Sequence_1",
+        "sstrPassword&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/02_RPA02_시험결과집계.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "mathPassRate&Sequence_1",
+        "englishPassRate&Sequence_1",
+        "koreanPassRate&Sequence_1",
+        "passMath&Sequence_1",
+        "totalMath&Sequence_1",
+        "passEnglish&Sequence_1",
+        "totalEnglish&Sequence_1",
+        "passKorean&Sequence_1",
+        "totalKorean&Sequence_1",
+        "intIndex&Sequence_1",
+        "dtInput&Sequence_1",
+        "dtOutput&Sequence_1",
+        "dtStandard&Sequence_1",
+        "index&Sequence_1",
+        "dtResult&Sequence_1",
+        "strName&Sequence_1",
+        "intScore&Sequence_1",
+        "strSubject&Sequence_1",
+        "standardScore&Sequence_1",
+        "columnsList&Sequence_1",
+        "standardRow&Sequence_1",
+        "result&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/03_이메일발송.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtResult&Sequence_1",
+        "strTable&Sequence_1",
+        "strAttach&Sequence_1",
+        "strContents&Sequence_1",
+        "sstrPassword&Sequence_1",
+        "strID&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../../../AppData/Local/Programs/UiPath/Studio/Snippets/Windows/SnippetsVBasic/Snippets/Mail/03_HTML형식DT_이메일발송.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strID&Sequence_1",
+        "sstrPassword&Sequence_1",
+        "strContents&Sequence_1",
+        "dtResult&Sequence_1",
+        "strTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../../../AppData/Local/Programs/UiPath/Studio/Snippets/Windows/SnippetsVBasic/Snippets/Mail/01_SMTP_이메일발송.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strID&Sequence_1",
+        "sstrPassword&Sequence_1",
+        "lstAttach&Sequence_1",
+        "strContents&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs_강사/00_전체.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intIndex2&Sequence_1",
+        "strID&Sequence_31",
+        "sstrPassword&Sequence_31",
+        "strContents&Sequence_31",
+        "dtResult&Sequence_31",
+        "strTable&Sequence_31",
+        "dblPassRate&Sequence_1",
+        "dtPass&Sequence_1",
+        "dtPerson&Sequence_1",
+        "strInputPath&Sequence_1",
+        "strInputFile&Sequence_1",
+        "strOutputPath&Sequence_1",
+        "strFileName&Sequence_1",
+        "dtInput&Sequence_1",
+        "dtOutput&Sequence_1",
+        "dtStandard&Sequence_1",
+        "dtPassRate&Sequence_1",
+        "intScore&Sequence_1",
+        "strSubject&Sequence_1",
+        "intStandardScore&Sequence_1",
+        "strPass&Sequence_1",
+        "intIndex&Sequence_1",
+        "arrSubject&Sequence_1",
+        "strID&Sequence_12",
+        "sstrPassword&Sequence_12",
+        "lstMailMessages&Sequence_12",
+        "intIndex&Sequence_12"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs_강사/03_이메일발송.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtResult&Sequence_1",
+        "strID&Sequence_1",
+        "sstrPassword&Sequence_1",
+        "strContents&Sequence_1",
+        "strTable&Sequence_1",
+        "strAttach&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
