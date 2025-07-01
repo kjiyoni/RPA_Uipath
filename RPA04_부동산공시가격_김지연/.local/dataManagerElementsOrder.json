@@ -1,0 +1,185 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtRealty&Sequence_1",
+        "strFileName&Sequence_1",
+        "strOutputPath&Sequence_1",
+        "strInputPath&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/00_전체.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strID&Sequence_85",
+        "sstrPassword&Sequence_85",
+        "strContents&Sequence_85",
+        "strInputPath&Sequence_1",
+        "strOutputPath&Sequence_1",
+        "strFileName&Sequence_1",
+        "strRegion&Sequence_1",
+        "strCity&Sequence_1",
+        "strComplex&Sequence_1",
+        "strDong&Sequence_1",
+        "strHo&Sequence_1",
+        "strPrice&Sequence_1",
+        "strStreet&Sequence_1",
+        "dtRealty&Sequence_1",
+        "priceDate&Sequence_1",
+        "priceAmount&Sequence_1",
+        "childElements&Sequence_1",
+        "childText&Sequence_1",
+        "childElements2&Sequence_1",
+        "childText2&Sequence_1",
+        "childElements3&Sequence_1",
+        "childText3&Sequence_1",
+        "dtResult&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/03_2_GetChosung.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strInitialWord&Sequence_1",
+        "strFrist&Sequence_1",
+        "lstChosung&Sequence_1",
+        "intIndex&Sequence_1",
+        "strUnicode&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dtRealty"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../../Users/Jiyeon/AppData/Local/Programs/UiPath/Studio/Snippets/Windows/SnippetsVBasic/Snippets/Mail/03_HTML형식DT_이메일발송.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strID&Sequence_1",
+        "sstrPassword&Sequence_1",
+        "strContents&Sequence_1",
+        "dtResult&Sequence_1",
+        "strTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/01_변수선언및초기화.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_strOutputPath",
+        "out_strInputPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/02_첨부파일복사.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_strOutputPath",
+        "io_strInputPath",
+        "out_strFileName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/03_1_DT추출.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strRegion&Sequence_1",
+        "strCity&Sequence_1",
+        "strComplex&Sequence_1",
+        "strDong&Sequence_1",
+        "strHo&Sequence_1",
+        "strPrice&Sequence_1",
+        "strStreet&Sequence_1",
+        "priceDate&Sequence_1",
+        "priceAmount&Sequence_1",
+        "childElements&Sequence_1",
+        "childText&Sequence_1",
+        "childElements2&Sequence_1",
+        "childText2&Sequence_1",
+        "childElements3&Sequence_1",
+        "childText3&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_dtRealty",
+        "io_strFileName",
+        "io_strOutputPath",
+        "io_strInputPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/04_결과파일시트작성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "io_strInputPath",
+        "io_strOutputPath",
+        "io_strFileName",
+        "in_dtRealty"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/05_이메일발송.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strContents&Sequence_1",
+        "sstrPassword&Sequence_1",
+        "strID&Sequence_1",
+        "strRegion&Sequence_1",
+        "strCity&Sequence_1",
+        "strComplex&Sequence_1",
+        "strDong&Sequence_1",
+        "strHo&Sequence_1",
+        "strPrice&Sequence_1",
+        "strStreet&Sequence_1",
+        "dtRealty&Sequence_1",
+        "priceDate&Sequence_1",
+        "priceAmount&Sequence_1",
+        "childElements&Sequence_1",
+        "childText&Sequence_1",
+        "childElements2&Sequence_1",
+        "childText2&Sequence_1",
+        "childElements3&Sequence_1",
+        "childText3&Sequence_1",
+        "dtResult&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strFileName",
+        "in_strOutputPath",
+        "in_strInputPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
