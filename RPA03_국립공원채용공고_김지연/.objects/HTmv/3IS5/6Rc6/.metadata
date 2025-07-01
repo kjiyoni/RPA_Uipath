@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome 전체채용공고행정정보행정·민원국립공원공단(1)",
+  "Type": "Screen",
+  "Id": "6Rc6XJh3GkG8dDLRQfqAdw",
+  "Reference": "1_S1jMZfdk6H4lhBLEqlUA/6Rc6XJh3GkG8dDLRQfqAdw",
+  "ParentRef": "1_S1jMZfdk6H4lhBLEqlUA/3IS5CacohE6g7QAIKsaDHg",
+  "Created": "2025-04-29T04:21:58.7457585Z",
+  "Updated": "2025-04-29T04:21:58.7457585Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.12.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.12.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,257 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="693.2,1371.1999999999998" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strID" />
+      <Variable x:TypeArguments="ss:SecureString" Name="sstrPassword" />
+      <Variable x:TypeArguments="x:String" Name="strInputPath" />
+      <Variable x:TypeArguments="x:String" Name="strOutputPath" />
+      <Variable x:TypeArguments="x:String" Name="strMailBodyDay" />
+      <Variable x:TypeArguments="s:String[]" Name="arrMountain" />
+      <Variable x:TypeArguments="x:String" Name="strFileName" />
+      <Variable x:TypeArguments="x:String" Name="failedList" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtFiltered" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="518.4,218.4" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="483.2,108" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Sequence DisplayName="국립공원채용공고_1 |  Sequence" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence sap2010:Annotation.AnnotationText="*필요 변수&#xA;strInputPath, strOutputPath" DisplayName="변수 선언_ Sequence" sap:VirtualizedContainerService.HintSize="513.6,307.2" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MultipleAssign DisplayName="경로변수 선언 | Multiple Assign" sap:VirtualizedContainerService.HintSize="480,171.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strInputPath]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">jobs1\Data\Input</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strOutputPath]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">jobs1\Data\Output</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MultipleAssign>
+            </Sequence>
+            <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="UiPath" CacheStrategy="None" DisplayName="Get Credential" FolderPath="kjiyoni17@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="513.6,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[sstrPassword]" Username="[strID]" />
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="01_이메일수신 - Invoke Workflow File (jobs1\01_이메일수신.xaml)" sap:VirtualizedContainerService.HintSize="513.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="jobs1\01_이메일수신.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InOutArgument x:TypeArguments="x:String" x:Key="io_strID">[strID]</InOutArgument>
+                <InOutArgument x:TypeArguments="ss:SecureString" x:Key="io_sstrPassword">[sstrPassword]</InOutArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="io_strInputPath">[strInputPath]</InOutArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="io_strOutputPath">[strOutputPath]</InOutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_strFileName">[strFileName]</OutArgument>
+                <OutArgument x:TypeArguments="s:String[]" x:Key="out_arrMountain">[arrMountain]</OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="out_strMailBodyDay">[strMailBodyDay]</OutArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="02_DT추출및가공 - Invoke Workflow File (jobs1\02_DT추출및가공.xaml)" sap:VirtualizedContainerService.HintSize="513.6,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="jobs1\02_DT추출및가공.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="s:String[]" x:Key="in_arrMountain">[arrMountain]</InArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="io_strFileName">[strFileName]</InOutArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="io_strInputPath">[strInputPath]</InOutArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="io_strOutputPath">[strOutputPath]</InOutArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="03_이메일발송 - Invoke Workflow File (jobs1\03_이메일발송.xaml)" sap:VirtualizedContainerService.HintSize="513.6,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="jobs1\03_이메일발송.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:String" x:Key="in_strMailBodyDay">[strMailBodyDay]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_strFileName">[strFileName]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_strInputPath">[strInputPath]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_strOutputPath">[strOutputPath]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="in_strID">[strID]</InArgument>
+                <InArgument x:TypeArguments="ss:SecureString" x:Key="in_sstrPassword">[sstrPassword]</InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+          </Sequence>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <Sequence DisplayName="국립공원채용공고_2 | Sequence" sap:VirtualizedContainerService.HintSize="518.4,1129.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="verifiedText" />
+        <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="UiPath" CacheStrategy="None" DisplayName="Get Credential" FolderPath="kjiyoni17@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="416,175.2" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[sstrPassword]" Username="[strID]" />
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="00_1_변수선언및초기화 - Invoke Workflow File (jobs2\00_1변수선언및초기화.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="jobs2\00_1_변수선언및초기화.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strInputPath">[strInputPath]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strOutputPath">[strOutputPath]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="01_이메일수신 - Invoke Workflow File (jobs2\01_이메일수신.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="jobs2\01_이메일수신.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InOutArgument x:TypeArguments="x:String" x:Key="io_strID">[strID]</InOutArgument>
+          <InOutArgument x:TypeArguments="ss:SecureString" x:Key="io_sstrPassword">[sstrPassword]</InOutArgument>
+          <InOutArgument x:TypeArguments="x:String" x:Key="io_strInputPath">[strInputPath]</InOutArgument>
+          <InOutArgument x:TypeArguments="x:String" x:Key="io_strOutputPath">[strOutputPath]</InOutArgument>
+          <OutArgument x:TypeArguments="s:String[]" x:Key="out_arrMountain">[arrMountain]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strMailBodyDay">[strMailBodyDay]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strFileName">[strFileName]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="02_1_DT추출및가공 - Invoke Workflow File (jobs2\02_1DT추출및가공.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="jobs2\02_DT추출및가공.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="s:String[]" x:Key="in_arrMountain">[arrMountain]</InArgument>
+          <InOutArgument x:TypeArguments="x:String" x:Key="io_strInputPath">[strInputPath]</InOutArgument>
+          <InOutArgument x:TypeArguments="x:String" x:Key="io_strOutputPath">[strOutputPath]</InOutArgument>
+          <InOutArgument x:TypeArguments="x:String" x:Key="io_strFileName">[strFileName]</InOutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_failedList">[failedList]</OutArgument>
+          <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dtFiltered">[dtFiltered]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="03_데이터검증 - Invoke Workflow File (jobs2\03_데이터검증.xaml)" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="jobs2\03_데이터검증.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InOutArgument x:TypeArguments="x:String" x:Key="io_strOutputPath">[strOutputPath]</InOutArgument>
+          <InOutArgument x:TypeArguments="x:String" x:Key="io_strInputPath">[strInputPath]</InOutArgument>
+          <InOutArgument x:TypeArguments="x:String" x:Key="io_strFileName">[strFileName]</InOutArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtFiltered">[dtFiltered]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_verifiedText">[verifiedText]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="04_이메일발송 - Invoke Workflow File (jobs2\04_이메일발송.xaml)" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="jobs2\04_이메일발송.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_strMailBodyDay">[strMailBodyDay]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_failedList">[failedList]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_strFileName">[strFileName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_strInputPath">[strInputPath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_strOutputPath">[strOutputPath]</InArgument>
+          <InArgument x:TypeArguments="ss:SecureString" x:Key="in_sstrPassword">[sstrPassword]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_strID">[strID]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="in_verifiedText">[verifiedText]</InArgument>
+          <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtFiltered">[dtFiltered]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+  </Sequence>
+</Activity>

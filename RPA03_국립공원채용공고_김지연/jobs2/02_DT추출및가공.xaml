@@ -1,0 +1,519 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_00_전체" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_arrMountain" Type="InArgument(s:String[])" />
+    <x:Property Name="io_strInputPath" Type="InOutArgument(x:String)" />
+    <x:Property Name="io_strOutputPath" Type="InOutArgument(x:String)" />
+    <x:Property Name="io_strFileName" Type="InOutArgument(x:String)" />
+    <x:Property Name="out_failedList" Type="OutArgument(x:String)" />
+    <x:Property Name="out_dtFiltered" Type="OutArgument(sd:DataTable)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>_00_전체_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_00_전체" sap:VirtualizedContainerService.HintSize="1140.8,5325.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:String[]" Name="arrMountain" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dtFiltered" />
+      <Variable x:TypeArguments="x:String" Name="strFileName" />
+      <Variable x:TypeArguments="x:String" Name="strOutputPath" />
+      <Variable x:TypeArguments="x:String" Name="strInputPath" />
+      <Variable x:TypeArguments="sd:DataTable" Name="ExtractDataTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1140.8,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;***DT 추출 및 가공 시작***&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <Sequence sap2010:Annotation.AnnotationText="*필요 변수&#xA;dtFiltered" DisplayName="DT 추출 및 가공 &amp; 결과파일 시트 완성 | Sequence" sap:VirtualizedContainerService.HintSize="1140.8,4962.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="DT 추출 | Sequence" sap:VirtualizedContainerService.HintSize="1107.2,4826.4" sap2010:WorkflowViewState.IdRef="Sequence_60">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:BuildDataTable sap2010:Annotation.AnnotationText="dtFiltered &#xA;클론(구조만 복사해 구조가 다르면 에러날수있음)&#xA;대신 Build 해줌" DataTable="[out_dtFiltered]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="1073.6,152" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;구분&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;공원명&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;제목&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;진행_x0020_현황&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:BuildDataTable>
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome 전체채용공고행정정보행정·민원국립공원공단(1)" sap:VirtualizedContainerService.HintSize="1073.6,3823.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="0d6a3930-c211-4326-a406-0abe9545e824" Version="V2" WindowResize="Maximize">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1040,3574.4" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each currentText" sap:VirtualizedContainerService.HintSize="1006.4,3512.8" sap2010:WorkflowViewState.IdRef="ForEach`1_12" Values="[in_arrMountain]">
+                  <ui:ForEach.Body>
+                    <ActivityAction x:TypeArguments="x:String">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1004.8,3389.6" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '가야산(1)'" sap:VirtualizedContainerService.HintSize="971.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0d6a3930-c211-4326-a406-0abe9545e824" Version="V4">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="knps.or.kr/front/portal/recruit/recruitList.do" ContentHash="NpMAQkSoxEyRXthuHfeMDg" DesignTimeRectangle="1267, 719, 48, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname='{0}' parentid='contents' tag='A' /&gt;&quot;, currentText)]" Guid="b75cb42e-62f0-4344-8a70-74c34f56389d" InformativeScreenshot="34a4b5b16b20cdd6a8117a27c8c0481e.png" Reference="1_S1jMZfdk6H4lhBLEqlUA/Sx4OFFN06E6xDA5FlsZRBw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='전체&amp;lt;채용공고&amp;lt;행정정보&amp;lt;행정·민원&amp;lt;국립공원공단' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="971.2,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="971.2,218.4" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                          <ui:CommentOut.Body>
+                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,108" sap2010:WorkflowViewState.IdRef="Sequence_95">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <TryCatch DisplayName="검색결과 유무 확인 | Try Catch" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <TryCatch.Try>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '[가야산]가야산국립공원사무소 기간제(탐방로…'" sap:VirtualizedContainerService.HintSize="467.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0d6a3930-c211-4326-a406-0abe9545e824" Version="V4">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="knps.or.kr/front/portal/recruit/recruitList.do" ContentHash="Ha4nrSsHLkesWn5XBmLAiA" DesignTimeRectangle="821, 1002, 436, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" Guid="713dd7ff-8fbf-4e13-b72a-8a6197d39eb7" InformativeScreenshot="5ecde481e92d14a17fadc0730d94641b.png" Reference="1_S1jMZfdk6H4lhBLEqlUA/uq8ZciJXS0qlOYc3oDRR6w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='가야산&amp;lt;채용공고&amp;lt;행정정보&amp;lt;행정·민원&amp;lt;국립공원공단' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </TryCatch.Try>
+                                <TryCatch.Catches>
+                                  <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                                    <ActivityAction x:TypeArguments="s:Exception">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,441.6" sap2010:WorkflowViewState.IdRef="Sequence_91">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign sap2010:Annotation.AnnotationText="실패한 항목들 계속 문자열로 누적&#xA;failedList = failedList + currentText + &quot;, &quot;" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[out_failedList]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[out_failedList + currentText + ", "]</InArgument>
+                                          </Assign.Value>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Assign>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="Warn" Message="[&quot;Failed: &quot; + currentText]" />
+                                        <ui:Continue sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="Continue_3" />
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </Catch>
+                                </TryCatch.Catches>
+                                <TryCatch.Finally>
+                                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="467.2,89.6" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </TryCatch.Finally>
+                              </TryCatch>
+                            </Sequence>
+                          </ui:CommentOut.Body>
+                        </ui:CommentOut>
+                        <uix:NCheckState sap2010:Annotation.AnnotationText="TryCatch에서 변수 생성 : faildList" DisplayName="Check App State '[가야산]가야산국립공원사무소 기간제(탐방로…'" sap:VirtualizedContainerService.HintSize="971.2,1128" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="0d6a3930-c211-4326-a406-0abe9545e824" Version="V4">
+                          <uix:NCheckState.IfExists>
+                            <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,91.2" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </Sequence>
+                          </uix:NCheckState.IfExists>
+                          <uix:NCheckState.IfNotExists>
+                            <TryCatch sap:VirtualizedContainerService.HintSize="468.8,846.4" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                              <TryCatch.Try>
+                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="467.2,173.6" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Throw Exception="[New Exception(&quot;산 이름 클릭 후 데이터가 로드되지 않았습니다.&quot;)]" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Throw_4" />
+                                </Sequence>
+                              </TryCatch.Try>
+                              <TryCatch.Catches>
+                                <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                  <ActivityAction x:TypeArguments="s:Exception">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="467.2,441.6" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap2010:Annotation.AnnotationText="실패한 항목들 계속 문자열로 누적&#xA;failedList = failedList + currentText + &quot;, &quot;" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[out_failedList]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[out_failedList + currentText + ", "]</InArgument>
+                                        </Assign.Value>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Assign>
+                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="433.6,176" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;Failed: &quot; + currentText]" />
+                                      <ui:Continue sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                                    </Sequence>
+                                  </ActivityAction>
+                                </Catch>
+                              </TryCatch.Catches>
+                              <TryCatch.Finally>
+                                <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="467.2,89.6" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </Sequence>
+                              </TryCatch.Finally>
+                            </TryCatch>
+                          </uix:NCheckState.IfNotExists>
+                          <uix:NCheckState.Target>
+                            <uix:TargetAnchorable BrowserURL="knps.or.kr/front/portal/recruit/recruitList.do" ContentHash="QKxiNX_LvEyOW--QU0xmtQ" DesignTimeRectangle="821, 627, 436, 21" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" Guid="6768e520-cb0d-44c4-b431-0bd1bb49b176" InformativeScreenshot="d8caa466223ff149c1bfa4fd1699a3ab.png" Reference="1_S1jMZfdk6H4lhBLEqlUA/4J9wE5l4HE-h6eqA8o1gAQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='가야산&amp;lt;채용공고&amp;lt;행정정보&amp;lt;행정·민원&amp;lt;국립공원공단' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                          </uix:NCheckState.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NCheckState>
+                        <uix:NSelectItem DelayAfter="2" DelayBefore="2" DisplayName="Select Item '10개씩'" sap:VirtualizedContainerService.HintSize="971.2,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_6" Item="30개씩" ScopeIdentifier="0d6a3930-c211-4326-a406-0abe9545e824" Version="V4">
+                          <uix:NSelectItem.Items>
+                            <scg:List x:TypeArguments="x:String" Capacity="3">
+                              <x:String>10개씩</x:String>
+                              <x:String>20개씩</x:String>
+                              <x:String>30개씩</x:String>
+                            </scg:List>
+                          </uix:NSelectItem.Items>
+                          <uix:NSelectItem.Target>
+                            <uix:TargetAnchorable BrowserURL="knps.or.kr/front/portal/recruit/recruitList.do" ContentHash="JafifPYXsk2FMPnPFiSqSw" DesignTimeRectangle="627, 898, 137, 29" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='pageRow' tag='SELECT' /&gt;" Guid="b9ae04db-570b-405b-a507-5c7192ef8904" InformativeScreenshot="8f624dcc51932bfa7a67f2fdef070942.png" Reference="1_S1jMZfdk6H4lhBLEqlUA/9nyKSrKueEWwqujBk4zMEA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='가야산&amp;lt;채용공고&amp;lt;행정정보&amp;lt;행정·민원&amp;lt;국립공원공단' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                          </uix:NSelectItem.Target>
+                        </uix:NSelectItem>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DelayBefore="2" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="971.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0d6a3930-c211-4326-a406-0abe9545e824" Version="V4">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="knps.or.kr/front/portal/recruit/recruitList.do" ContentHash="ZqF3DctBBkOzv6DJiVw5TQ" DesignTimeRectangle="776, 898, 55, 29" DesignTimeScaleFactor="1.25" ElementType="Icon" FullSelectorArgument="&lt;webctrl parentid='classificationBtn' tag='IMG' /&gt;" Guid="6d892f4e-90f1-4330-a7d3-9e381f71206f" InformativeScreenshot="73aebd8fc614b35d3ea1bd67eb51289b.png" Reference="1_S1jMZfdk6H4lhBLEqlUA/G3pGb20iG0qJPxEu9p3OJg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='가야산&amp;lt;채용공고&amp;lt;행정정보&amp;lt;행정·민원&amp;lt;국립공원공단' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayAfter="2" DelayBefore="2" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='구분' ReferenceIdx='0' Name='구분'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='공원명' ReferenceIdx='1' Name='공원명'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='제목' ReferenceIdx='2' Name='제목'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='제목 Url' ReferenceIdx='3' Name='제목 Url' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='조회수' ReferenceIdx='4' Name='조회수' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='진행현황' ReferenceIdx='5' Name='진행현황' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='진행현황 Src' ReferenceIdx='6' Name='진행현황 Src' IsDeleted='true'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='진행현황 Alt Text' ReferenceIdx='7' Name='진행 현황'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='구분' attr='fulltext' /&gt;&lt;column name='공원명' attr='fulltext' /&gt;&lt;column name='제목' attr='fulltext' name2='제목 Url' attr2='href' /&gt;&lt;column name='조회수' attr='fulltext' /&gt;&lt;column name='진행현황' attr='fulltext' name2='진행현황 Src' attr2='src' name3='진행현황 Alt Text' attr3='alt' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="971.2,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_21" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="0d6a3930-c211-4326-a406-0abe9545e824" Version="V4">
+                          <uix:NExtractData.Target>
+                            <uix:TargetAnchorable BrowserURL="https://www.knps.or.kr/front/portal/recruit/recruitList.do?menuNo=7070064" DesignTimeRectangle="627, 573, 924, 1413" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="c81b3207-f304-44e9-8fd3-7e5e142c0b22" InformativeScreenshot="7a2925e1f4318141f65a7c9f3c2fa2de.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='가야산&amp;lt;채용공고&amp;lt;행정정보&amp;lt;행정·민원&amp;lt;국립공원공단' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+                          </uix:NExtractData.Target>
+                        </uix:NExtractData>
+                        <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable]" DisplayName="DT 추출 | Write Range Workbook" sap:VirtualizedContainerService.HintSize="971.2,148" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="[currentText]" WorkbookPath="[Path.Combine(io_strOutputPath, io_strFileName)]" />
+                        <Sequence DisplayName="DT 가공 | Sequence" sap:VirtualizedContainerService.HintSize="971.2,954.4" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="452.8,732" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                            <ui:ForEachRow.Body>
+                              <ActivityAction x:TypeArguments="sd:DataRow">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="451.2,550.4" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If Condition="[CurrentRow(&quot;진행 현황&quot;).ToString.Trim = &quot;진행중&quot;]" sap:VirtualizedContainerService.HintSize="417.6,490.4" sap2010:WorkflowViewState.IdRef="If_2">
+                                    <If.Then>
+                                      <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,271.2" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.ToArray]" DataTable="[out_dtFiltered]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382.4,211.2" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </ActivityAction>
+                            </ui:ForEachRow.Body>
+                          </ui:ForEachRow>
+                          <ui:WriteRange WorkbookPathResource="{x:Null}" AddHeaders="False" DataTable="[out_dtFiltered]" DisplayName="결과파일 시트 완성 | Write Range Workbook" sap:VirtualizedContainerService.HintSize="452.8,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="Temp" StartingCell="A2" WorkbookPath="[path.Combine(io_strOutputPath, io_strFileName)]" />
+                        </Sequence>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEach.Body>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:ForEach>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFfSURBVDhPY2AYnmDbtonsq67Us6GLEw1WHm9fv+5k98JVhzvk0OUIglWnOiceujPz/7Qjtf9DVoS/r9+cG4KuBitYe6ZFcsOZ7jVH7s/6P+NI3X+zua7/VWbb/PdZHvS/fGNmLrp6OOha1SWx6HBn2sZznWfWXmj/WLUz47H+TKtHipOMHmlMM3+kPMXkmctit9dlW2NrUTTa72ep37+fhcE6q0PbKquvQzO6/4BEcN9t7pCu+0IJky+LZ887J168+Jx46ZJzQsULLiiULbgrlLXsiGj++pNmHXu2h807kT5x/y0ZhImqvdIc9n2xgs4TNgm59P8RCVz4XyRkwX+R2KX/RbPW/Rcp3fPfZPKl/7ELT55t3HXN/v///8zIDkIB/O79CoLufY2CLj2vhD0n/xfymvJfImrO0a7DdxvxakQHIu4tkgKe/asF3HqvMjDEcKPLEw14nduE0cWGEQAAmbCUtJYuwREAAAAASUVORK5CYII=" InformativeScreenshot="44461a0e8853ee4dd995a19ca8431720.jpg" Selector="&lt;html app='chrome.exe' title='전체&amp;lt;채용공고&amp;lt;행정정보&amp;lt;행정·민원&amp;lt;국립공원공단' /&gt;" Title="전체&lt;채용공고&lt;행정정보&lt;행정·민원&lt;국립공원공단" Url="https://www.knps.or.kr/front/portal/recruit/recruitList.do?menuNo=7070064" Version="V1" />
+          </uix:NApplicationCard.TargetApp>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uix:NApplicationCard>
+        <Sequence DisplayName="Temp시트 이름 변경 | Sequence" sap:VirtualizedContainerService.HintSize="1073.6,768" sap2010:WorkflowViewState.IdRef="Sequence_80">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="568,684.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+            <ueab:ExcelProcessScopeX.Body>
+              <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="534.4,575.2" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="500.8,515.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[Path.Combine(io_strOutputPath, io_strFileName)]">
+                    <ueab:ExcelApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,222.4" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ueab:RenameSheetX DisplayName="Rename Sheet" From="[Excel.Sheet(&quot;Temp&quot;)]" sap:VirtualizedContainerService.HintSize="433.6,162.4" sap2010:WorkflowViewState.IdRef="RenameSheetX_1" To="&lt;채용진행중&gt;" />
+                        </Sequence>
+                      </ActivityAction>
+                    </ueab:ExcelApplicationCard.Body>
+                  </ueab:ExcelApplicationCard>
+                </Sequence>
+              </ActivityAction>
+            </ueab:ExcelProcessScopeX.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ueab:ExcelProcessScopeX>
+        </Sequence>
+      </Sequence>
+    </Sequence>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1140.8,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;***DT 추출 및 가공 종료***&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+  </Sequence>
+</Activity>

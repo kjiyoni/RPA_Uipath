@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="_ROlVQyyp0iT4pgBJDz-cg" Reference="1_S1jMZfdk6H4lhBLEqlUA/fyOycSm2_0Ktei2D143-5A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="pFFgbbcia02q2cjlmiXjdw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFfSURBVDhPY2AYnmDbtonsq67Us6GLEw1WHm9fv+5k98JVhzvk0OUIglWnOiceujPz/7Qjtf9DVoS/r9+cG4KuBitYe6ZFcsOZ7jVH7s/6P+NI3X+zua7/VWbb/PdZHvS/fGNmLrp6OOha1SWx6HBn2sZznWfWXmj/WLUz47H+TKtHipOMHmlMM3+kPMXkmctit9dlW2NrUTTa72ep37+fhcE6q0PbKquvQzO6/4BEcN9t7pCu+0IJky+LZ887J168+Jx46ZJzQsULLiiULbgrlLXsiGj++pNmHXu2h807kT5x/y0ZhImqvdIc9n2xgs4TNgm59P8RCVz4XyRkwX+R2KX/RbPW/Rcp3fPfZPKl/7ELT55t3HXN/v///8zIDkIB/O79CoLufY2CLj2vhD0n/xfymvJfImrO0a7DdxvxakQHIu4tkgKe/asF3HqvMjDEcKPLEw14nduE0cWGEQAAmbCUtJYuwREAAAAASUVORK5CYII=" Reference="1_S1jMZfdk6H4lhBLEqlUA/fyOycSm2_0Ktei2D143-5A" Selector="&lt;html app='chrome.exe' title='전체&amp;lt;채용공고&amp;lt;행정정보&amp;lt;행정·민원&amp;lt;국립공원공단' /&gt;" Title="전체&lt;채용공고&lt;행정정보&lt;행정·민원&lt;국립공원공단" Url="https://www.knps.or.kr/front/portal/recruit/recruitList.do?menuNo=7070064" Version="V1">
+      <imageRef attrName="InformativeScreenshot" originalValue="44461a0e8853ee4dd995a19ca8431720.jpg" xmlns="">03j8Cw3kcakepVi-WYKAM1w</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

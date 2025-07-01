@@ -1,0 +1,394 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="_00_전체" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:si="clr-namespace:System.IO;assembly=System.Private.CoreLib" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="io_strInputPath" Type="InOutArgument(x:String)" />
+    <x:Property Name="io_strOutputPath" Type="InOutArgument(x:String)" />
+    <x:Property Name="io_strID" Type="InOutArgument(x:String)" />
+    <x:Property Name="io_sstrPassword" Type="InOutArgument(ss:SecureString)" />
+    <x:Property Name="out_arrMountain" Type="OutArgument(s:String[])" />
+    <x:Property Name="out_strFileName" Type="OutArgument(x:String)" />
+    <x:Property Name="out_strMailBodyDay" Type="OutArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>_00_전체_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.IMAP.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="_00_전체" sap:VirtualizedContainerService.HintSize="881.2,3798.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="lstMailMessages" />
+      <Variable x:TypeArguments="x:Int32" Name="intIndex" />
+      <Variable x:TypeArguments="x:String" Name="strMailBody" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="lstMailBody" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="lstMailBodyMountain" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="571.2,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;***이메일 수신 시작***&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <Sequence sap2010:Annotation.AnnotationText="*필요 변수&#xA;strID, strPassword, strMailBody" DisplayName="이메일 수신 &amp; 첨부파일 저장 | Sequence" sap:VirtualizedContainerService.HintSize="571.2,1508" sap2010:WorkflowViewState.IdRef="Sequence_3">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="_02_IMAP_이메일수신" sap:VirtualizedContainerService.HintSize="537.6,1372" sap2010:WorkflowViewState.IdRef="Sequence_8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:GetIMAPMailMessages ClientName="{x:Null}" ClientVersion="{x:Null}" FilterExpression="{x:Null}" Password="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" DeleteMessages="False" DisplayName="Get IMAP Mail Messages" Email="[io_strID]" EnableSSL="True" FilterExpressionCharacterSet="US-ASCII" sap:VirtualizedContainerService.HintSize="504,56.8" sap2010:WorkflowViewState.IdRef="GetIMAPMailMessages_1" IgnoreCRL="False" MailFolder="Inbox" MarkAsRead="False" Messages="[lstMailMessages]" OnlyUnreadMessages="False" OrderByDate="NewestFirst" Port="993" SecureConnection="Auto" SecurePassword="[io_sstrPassword]" Server="imap.gmail.com" Top="10" />
+        <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="[intIndex]" DisplayName="For Each currentMailMessage" sap:VirtualizedContainerService.HintSize="504,1232" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[lstMailMessages]">
+          <ui:ForEach.Body>
+            <ActivityAction x:TypeArguments="snm:MailMessage">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentMailMessage" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="502.4,1110.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If Condition="[currentMailMessage.Subject.Contains(&quot;RPA03_국립공원2&quot;) AndAlso currentMailMessage.Sender.ToString.Trim.Contains(&quot;Min A Song&quot;) AndAlso currentMailMessage.Attachments.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="468.8,936.8" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If.Then>
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="467.2,708.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;메일제목: &quot;+currentMailMessage.Subject]" />
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[&quot;발신자: &quot;+currentMailMessage.Sender.ToString.Trim]" />
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;메일내용: &quot;+currentMailMessage.Body]" />
+                      <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[strMailBody]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[currentMailMessage.Body]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" ExcludeInlineAttachments="False" FolderPath="[io_strInputPath]" sap:VirtualizedContainerService.HintSize="433.6,120" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[currentMailMessage]" OverwriteExisting="False" />
+                      <ui:Break sap:VirtualizedContainerService.HintSize="433.6,48" sap2010:WorkflowViewState.IdRef="Break_1" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="467.2,89.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </Sequence>
+                  </If.Else>
+                </If>
+                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="468.8,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_4" Text="[(intIndex+1).ToString.Trim+&quot;번째 메일 처리&quot;]" />
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEach.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ForEach>
+      </Sequence>
+    </Sequence>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="571.2,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;***이메일 수신 종료***&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="571.2,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;***첨부파일 복사 &amp; 본문텍스트 추출 시작***&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <Sequence sap2010:Annotation.AnnotationText="*필요 변수&#xA;strInputPath, strOutputPath, strFileName, strMailBodyDay, lstMailBodyMountain, arrMountain&#xA;*Split 줄바꿈 : System.Environment.NewLine, vbCrLf, vbCr, vbLf" DisplayName="첨부파일 복사 &amp; 본문 텍스트 추출 | Sequence" sap:VirtualizedContainerService.HintSize="571.2,2048.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="본문 텍스트 추출 | Sequence" sap:VirtualizedContainerService.HintSize="534.4,1056" sap2010:WorkflowViewState.IdRef="Sequence_14">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+          <Assign.To>
+            <OutArgument x:TypeArguments="scg:List(x:String)">[lstMailBody]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="scg:List(x:String)">[strMailBody.Split(vbCrLf).ToList]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[String.Format(&quot;.&quot;, lstMailBody)]" />
+        <Assign sap2010:Annotation.AnnotationText="strMailBodyDay = lstMailBody(2).Substring(0, 10).Replace(&quot;/&quot;,&quot;&quot;)" sap:VirtualizedContainerService.HintSize="433.6,144.8" sap2010:WorkflowViewState.IdRef="Assign_4">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[out_strMailBodyDay]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[lstMailBody(2).Substring(0, 10).Replace("/","")]</InArgument>
+          </Assign.Value>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Assign>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[out_strMailBodyDay]" />
+        <Assign sap2010:Annotation.AnnotationText="Split과 끝에 붙은 *제거&#xA;lstMailBodyMountain =lstMailBody(4).Split(&quot;: &quot;).Skip(1).Select(Function(x) x.TrimEnd(&quot;*&quot;c)).ToList" sap:VirtualizedContainerService.HintSize="433.6,173.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+          <Assign.To>
+            <OutArgument x:TypeArguments="scg:List(x:String)">[lstMailBodyMountain]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="scg:List(x:String)">[lstMailBody(4).Split(": ").Skip(1).Select(Function(x) x.TrimEnd("*"c)).ToList]</InArgument>
+          </Assign.Value>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Assign>
+        <Assign sap2010:Annotation.AnnotationText="*array로 다시 산이름 Split하여 담아줌&#xA;arrMountain = lstMailBodyMountain(0).Split(&quot;,&quot;c).Select(Function(s) s.Trim).ToArray" sap:VirtualizedContainerService.HintSize="433.6,173.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+          <Assign.To>
+            <OutArgument x:TypeArguments="s:String[]">[out_arrMountain]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="s:String[]">[lstMailBodyMountain(0).Split(","c).Select(Function(s) s.Trim).ToArray]</InArgument>
+          </Assign.Value>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Assign>
+        <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[String.Join(&quot;,&quot;, out_arrMountain)]" />
+      </Sequence>
+      <Sequence DisplayName="첨부파일 복사 | Sequence" sap:VirtualizedContainerService.HintSize="534.4,840.8" sap2010:WorkflowViewState.IdRef="Sequence_22">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:ForEachFileX sap2010:Annotation.AnnotationText="" DisplayName="For Each File in Folder" Folder="[io_strInputPath]" sap:VirtualizedContainerService.HintSize="500.8,757.6" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+          <ui:ForEachFileX.Body>
+            <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
+              <ActivityAction.Argument1>
+                <DelegateInArgument x:TypeArguments="si:FileInfo" Name="CurrentFile" />
+              </ActivityAction.Argument1>
+              <ActivityAction.Argument2>
+                <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+              </ActivityAction.Argument2>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,440" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap2010:Annotation.AnnotationText="strFileName = CurrentFile.Name.Replace(&quot;템플릿&quot;, strMailBodyDay +&quot;_김지연&quot;)" DisplayName="Assign" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[out_strFileName]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[CurrentFile.Name.Replace("템플릿", out_strMailBodyDay +"_김지연")]</InArgument>
+                  </Assign.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Assign>
+                <ui:CopyFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="CurrentFile.Fullname : 절대경로&#xA;CurrentFile.Name : 파일명만" Destination="[Path.Combine(io_strOutputPath, out_strFileName)]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="433.6,222.4" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[Path.Combine(io_strInputPath, CurrentFile.Name)]">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:CopyFile>
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEachFileX.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ForEachFileX>
+      </Sequence>
+    </Sequence>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="571.2,48" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;***첨부파일 복사 &amp; 본문텍스트 추출 종료***&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+  </Sequence>
+</Activity>
