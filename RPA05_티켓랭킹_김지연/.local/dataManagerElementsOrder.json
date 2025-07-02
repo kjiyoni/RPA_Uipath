@@ -1,0 +1,135 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strInputPath&Sequence_1",
+        "strOutputPath&Sequence_1",
+        "strID&Sequence_1",
+        "sstrPassword&Sequence_1",
+        "strFileName&Sequence_1",
+        "arrTicket&Sequence_1",
+        "dtFiltered&Sequence_1",
+        "intIndex&Sequence_1",
+        "dtFirstTable&Sequence_1",
+        "ExtractDataTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/01_변수선언및초기화.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_strOutputPath",
+        "out_strInputPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/02_이메일수신.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "lstTicket&Sequence_1",
+        "lstMailMessages&Sequence_1",
+        "intIndex&Sequence_1",
+        "strMailBody&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_arrTicket",
+        "in_strID",
+        "in_sstrPassword",
+        "out_strFileName",
+        "io_strOutputPath",
+        "io_strInputPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/03_DT추출.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "out_ExtractDataTable&Sequence_1",
+        "intIndex&Sequence_1",
+        "arrDatePlace&Sequence_1",
+        "arrDateParts&Sequence_1",
+        "strStartDate&Sequence_1",
+        "strPlace&Sequence_1",
+        "strEndDate&Sequence_1",
+        "strSubject&Sequence_1",
+        "strRanks&Sequence_1",
+        "ExtractDataTable&Sequence_1",
+        "dtFiltered&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_dtFirstTable",
+        "io_arrTicket",
+        "out_dtFiltered",
+        "io_strFileName",
+        "io_strOutputPath",
+        "io_strInputPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/04_이메일발송.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strContents&Sequence_5",
+        "Attach&Sequence_5",
+        "strTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strFileName",
+        "in_strOutputPath",
+        "in_strInputPath",
+        "in_sstrPassword",
+        "in_strID",
+        "in_dtFirstTable"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/04_1위추출(수정중).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_dtFiltered",
+        "out_dtFirstTable",
+        "in_intIndex",
+        "in_currentText"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../../Users/Jiyeon/AppData/Local/Programs/UiPath/Studio/Snippets/Windows/SnippetsVBasic/Snippets/Mail/03_HTML형식DT_이메일발송.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strID&Sequence_1",
+        "sstrPassword&Sequence_1",
+        "strContents&Sequence_1",
+        "dtResult&Sequence_1",
+        "strTable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}

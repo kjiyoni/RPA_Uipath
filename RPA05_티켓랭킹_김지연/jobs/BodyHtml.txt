@@ -1,0 +1,9 @@
+﻿<span style="font-family: &quot;Malgun Gothic&quot;, &quot;맑은 고딕&quot;, sans-serif;">​</span>
+안녕하세요.<div><br></div>
+<div>
+ <span>{0}</span> <span>RPA 수행결과 안내드립니다.</span><div><br></div>
+ 전체, 콘서트, 뮤지컬, 연극, 클래식/무용, 전시/행사 항목의 1위 정보는 아래와 같습니다.<div><br></div>
+</div>
+<div>{1}</div><div><br></div>
+<div>추출한 데이터는 엑셀 파일로 첨부드리오니 참고바랍니다.</div><div><br></div>
+<div>감사합니다.</div><div>김지연 드림</div>
