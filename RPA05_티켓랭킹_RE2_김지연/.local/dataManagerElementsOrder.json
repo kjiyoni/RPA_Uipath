@@ -1,0 +1,351 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intIndex&StateMachine_1",
+        "lstFailList&StateMachine_1",
+        "lstSuccessList&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "strID&StateMachine_1",
+        "sstrPassword&StateMachine_1",
+        "strInputPath&StateMachine_1",
+        "strOutputPath&StateMachine_1",
+        "intTotalCnt&StateMachine_1",
+        "intSuccessCnt&StateMachine_1",
+        "intFailCnt&StateMachine_1",
+        "dtFirstTable&StateMachine_1",
+        "arrTicket&StateMachine_1",
+        "TransactionItem&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dtFiltered&Sequence_1",
+        "TransactionNumber&Sequence_1",
+        "dt_TransactionData&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_intIndex",
+        "io_lstFailList",
+        "io_lstSuccessList",
+        "io_dtFirstTable",
+        "in_TransactionNumber",
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/GetTransactionData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionNumber",
+        "in_Config",
+        "out_TransactionItem",
+        "out_TransactionField1",
+        "out_TransactionField2",
+        "out_TransactionID",
+        "io_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/SetTransactionStatus.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "QueueRetry&Sequence_17",
+        "ScreenshotPath&Sequence_17"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BusinessException",
+        "in_TransactionField1",
+        "in_TransactionField2",
+        "in_TransactionID",
+        "in_SystemException",
+        "in_Config",
+        "in_TransactionItem",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "io_ConsecutiveSystemExceptions"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/RetryCurrentTransaction.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "io_RetryNumber",
+        "io_TransactionNumber",
+        "in_SystemException",
+        "in_QueueRetry"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/TakeScreenshot.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Screenshot&Sequence_1",
+        "ScreenshotFileInfo&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Folder",
+        "io_FilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/KillAllProcesses.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "listProgram&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../ICT_CoC_폴더정리/ICT_DeleteFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_FolderPath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "../ICT_CoC_폴더정리/ICT_MoveFile.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_FolderPath_Dest",
+        "in_FolderPath_Orig"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/CloseAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "listProgram&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_SettingsAndConstants&Sequence_5",
+        "dt_Assets&Sequence_6",
+        "AssetValue&Sequence_11"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ConfigFile",
+        "in_ConfigSheets",
+        "out_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllApplications.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/03_변수선언및DT생성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "out_intIndex",
+        "out_lstFailList",
+        "out_lstSuccessList",
+        "out_dtFirstTable",
+        "in_TransactionItem",
+        "in_arrTicket",
+        "in_Config",
+        "out_intFailCnt",
+        "out_intSuccessCnt",
+        "out_intTotalCnt",
+        "out_dt_TransactionData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/02_이메일수신.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strMailBody&Sequence_1",
+        "intIndex&Sequence_1",
+        "lstMailMessages&Sequence_1",
+        "lstTicket&Sequence_1",
+        "strFileName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_strID",
+        "in_sstrPassword",
+        "in_Config",
+        "out_arrTicket"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/05_DT추출.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "arrDatePlace&Sequence_1",
+        "arrDateParts&Sequence_1",
+        "strStartDate&Sequence_1",
+        "strPlace&Sequence_1",
+        "strEndDate&Sequence_1",
+        "strSubject&Sequence_1",
+        "strRanks&Sequence_1",
+        "ExtractDataTable&Sequence_1",
+        "io_strFileName&Sequence_1",
+        "in_arrTicket&Sequence_1",
+        "CurrentElement_Label&Sequence_1",
+        "CurrentElement&Sequence_1",
+        "strCategory&Sequence_1",
+        "elementExists&Sequence_1",
+        "intLastIndex&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_intIndex",
+        "out_dtFiltered",
+        "io_dtFirstTable",
+        "in_TransactionNumber",
+        "io_lstSuccessList",
+        "io_lstFailList",
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/06_이메일발송.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strTable2&Sequence_1",
+        "strTable1&Sequence_1",
+        "Attach&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_lstFailList",
+        "in_lstSuccessList",
+        "in_dtFirstTable",
+        "in_dt_TransactionData",
+        "in_intTotalCnt",
+        "in_intFailCnt",
+        "in_intSuccessCnt",
+        "in_Config",
+        "in_strID",
+        "in_sstrPassword"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/04_결과시트작성.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_arrTicket",
+        "in_Config",
+        "in_TransactionItem"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "jobs/01_초기화및파일복사.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strFileName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main(Autosaved).xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "TransactionField2&StateMachine_1",
+        "TransactionField1&StateMachine_1",
+        "TransactionID&StateMachine_1",
+        "dt_TransactionData&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "strID&StateMachine_1",
+        "sstrPassword&StateMachine_1",
+        "strInputPath&StateMachine_1",
+        "strOutputPath&StateMachine_1",
+        "intTotalCnt&StateMachine_1",
+        "intSuccessCnt&StateMachine_1",
+        "intFailCnt&StateMachine_1",
+        "dtFirstTable&StateMachine_1",
+        "arrTicket&StateMachine_1",
+        "TransactionItem&StateMachine_1",
+        "ShouldStop&Sequence_25"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
