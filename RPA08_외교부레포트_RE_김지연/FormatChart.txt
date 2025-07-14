@@ -1,0 +1,18 @@
+Sub FormatChart()
+    Dim ws As Worksheet
+    Set ws = ThisWorkbook.Sheets("종합")
+
+    Dim ch As ChartObject
+    Set ch = ws.ChartObjects(1)
+
+    ch.Chart.HasTitle = True
+    ch.Chart.ChartTitle.Text = "집행액"
+
+    ch.Left = 550
+    ch.Top = 20
+
+    ch.Width = 500
+    ch.Height = 300
+
+    ch.Chart.SeriesCollection(1).Name = "집행액"
+End Sub

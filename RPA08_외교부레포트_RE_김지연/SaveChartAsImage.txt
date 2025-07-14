@@ -1,0 +1,5 @@
+Sub SaveChartAsImage()
+    Dim chartObj As ChartObject
+    Set chartObj = ActiveSheet.ChartObjects(1)
+    chartObj.Chart.Export Filename:="C:\Users\Jiyeon\Desktop\ChartImage.png", FilterName:="PNG"
+End Sub
