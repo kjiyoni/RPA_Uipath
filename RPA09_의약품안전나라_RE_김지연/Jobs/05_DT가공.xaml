@@ -118,7 +118,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="_01_" sap:VirtualizedContainerService.HintSize="623.6000000000001,3694.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="_01_" sap:VirtualizedContainerService.HintSize="601.6,4183.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtIssue" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtCurrentIssue" />
@@ -176,7 +176,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ueab:ExcelProcessScopeX>
     </Sequence>
-    <Sequence DisplayName="DT 가공 - 이슈 | Sequence" sap:VirtualizedContainerService.HintSize="601.6,1555.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="DT 가공 - 이슈 | Sequence" sap:VirtualizedContainerService.HintSize="601.6,2044" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -189,44 +189,53 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:BuildDataTable>
-      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="488,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;dtOriginal 개수: &quot;+io_dtOriginal.Rows.Count.ToString]" />
-      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[io_dtOriginal]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="488,1065.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="488,56.8" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[&quot;dtOriginal 개수: &quot;+io_dtOriginal.Rows.Count.ToString]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </WriteLine>
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[io_dtOriginal]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="488,1445.6" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
         <ui:ForEachRow.Body>
           <ActivityAction x:TypeArguments="sd:DataRow">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486.4,884" sap2010:WorkflowViewState.IdRef="Sequence_12">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486.4,1264" sap2010:WorkflowViewState.IdRef="Sequence_12">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="452.8,824" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_Config(&quot;검색어&quot;).ToString.Trim]">
+              <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="*이미 in_Config(&quot;검색어&quot;) 값은 배열, Object 타입이므로 형변환 해서 사용 " DisplayName="For Each" sap:VirtualizedContainerService.HintSize="452.8,1204" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[CType(in_Config(&quot;검색어&quot;), String())]">
                 <ui:ForEach.Body>
-                  <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction x:TypeArguments="x:String">
                     <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="x:Object" Name="currentItem" />
+                      <DelegateInArgument x:TypeArguments="x:String" Name="currentText" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="451.2,651.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="451.2,1000" sap2010:WorkflowViewState.IdRef="Sequence_15">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <If sap2010:Annotation.AnnotationText="CurrentRow(&quot;위반내역&quot;).ToString.Trim.Contains(currentItem.ToString.Trim)" Condition="[CurrentRow(&quot;위반내역&quot;).ToString.Trim.Contains(currentItem.ToString.Trim)]" sap:VirtualizedContainerService.HintSize="417.6,591.2" sap2010:WorkflowViewState.IdRef="If_3">
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="417.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;현재 행: &quot; + CurrentRow(&quot;위반내역&quot;).ToString + &quot; / 검색어: &quot; + currentText.ToString]" />
+                      <If sap2010:Annotation.AnnotationText="CurrentRow(&quot;위반내역&quot;).ToString.Trim.Contains(currentItem.ToString.Trim)" Condition="[CurrentRow(&quot;위반내역&quot;).ToString.Trim.Contains(currentText.ToString.Trim)]" sap:VirtualizedContainerService.HintSize="417.6,765.6" sap2010:WorkflowViewState.IdRef="If_3">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,328" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                          <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,502.4" sap2010:WorkflowViewState.IdRef="Sequence_13">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;[매칭 성공] → 행 추가됨: &quot; + CurrentRow(&quot;위반내역&quot;).ToString]" />
                             <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[CurrentRow.ItemArray.ToArray]" DataTable="[dtIssue]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="382.4,220" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
                             <ui:Break sap:VirtualizedContainerService.HintSize="382.4,48" sap2010:WorkflowViewState.IdRef="Break_1" />
                           </Sequence>
@@ -244,11 +253,17 @@
                     </Sequence>
                   </ActivityAction>
                 </ui:ForEach.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
               </ui:ForEach>
             </Sequence>
           </ActivityAction>
         </ui:ForEachRow.Body>
       </ui:ForEachRow>
+      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="488,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;최종 매칭 건수: &quot; + dtIssue.Rows.Count.ToString]" />
       <ui:WriteRange AddHeaders="False" DataTable="[dtIssue]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="488,139.2" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="이슈" StartingCell="A2" WorkbookPath="[Path.Combine(in_Config(&quot;결과물FolderId&quot;).ToString.Trim, in_Config(&quot;파일명&quot;).ToString.Trim)]" />
     </Sequence>
     <Sequence DisplayName="DT 가공 - 전월이슈 | Sequence" sap:VirtualizedContainerService.HintSize="601.6,425.6" sap2010:WorkflowViewState.IdRef="Sequence_17">
